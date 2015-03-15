@@ -1161,7 +1161,7 @@ function questCall(b, a, c, d, g, k, f) {
     userContext.postQuestEvent = "quest_post_" + b + "_" + a + "_choice_" + c;
     userContext.playerData;
     userContext.questActionChoice = c;
-    b = void 0 != f ? "/play/quest?quest_id=" + f;
+    b = void 0 != f ? "/play/quest?quest_id=" + f : "/play/quest?quest_symbol=" + b + "&stage=" + a + "&choice=" + c + "&chosen=" + escape(d);
     void 0 != g ? (b = isWeb() ? b + ("&chat=" + escape($("#" + g).val())) : b + ("&chat=" + escape(g)),
         userContext.hideWarParty = !0) : playSound("page-turn");
     void 0 != k && (userContext.dialogIndex++, userContext.dialogHistory[userContext.dialogIndex] = unescape(k));
