@@ -813,7 +813,7 @@ function clearLog(){
     $("#logTab").trigger("click");
 }
 
-var bossChallenger = (function(log, error, questClose, questCall, questSubmit, localStorage){
+var bossChallenger = (function(log, error, questClose, questSubmit, localStorage){
 
     var _this = {
         init: init,
@@ -881,7 +881,7 @@ var bossChallenger = (function(log, error, questClose, questCall, questSubmit, l
 
 
         if (a.actions_remaining = 5) {
-            questCall(a.symbol, a.stage, c, a.chosen, null, null, a.id);
+            questSubmit(a.symbol, null, null, null, null, null, a.id);
             questSubmit(a.symbol, a.stage, c, a.chosen, null, null, a.id);
         }
         else if (a.actions_remaining > 0) {
