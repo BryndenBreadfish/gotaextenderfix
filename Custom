@@ -1155,14 +1155,14 @@ function pvpLaunch(callback) {
 log("Player vs player enhanced. Client pvpBan, hilarious.", "initialize");
 
 
-function questSubmit(b, a, c, d, g, k, f) {
+function questSubmit(b, a, c, d, g, k, f, p) {
     doLog("questSubmit: stage=" + a + " choice=" + c);
     uiEvent("quest_submit_" + b + "_" + a + "_choice_" + c, userContext.playerData);
     userContext.postQuestEvent = "quest_post_" + b + "_" + a + "_choice_" + c;
     userContext.playerData;
     userContext.questActionChoice = c;
-    if (a.actions_remaining > 4) {
-    	"/play/quest?quest_id=" + f;
+    if (p > 4) {
+    	b = void 0 != f ? "/play/quest?quest_id=" + f;
     }	
     b = void 0 != f ? "/play/quest?quest_id=" + f + "&stage=" + a + "&choice=" + c + "&chosen=" + escape(d) : "/play/quest?quest_symbol=" + b + "&stage=" + a + "&choice=" + c + "&chosen=" + escape(d);
     void 0 != g ? (b = isWeb() ? b + ("&chat=" + escape($("#" + g).val())) : b + ("&chat=" + escape(g)),
