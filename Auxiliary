@@ -885,7 +885,7 @@ var bossChallenger = (function(log, error, questClose, questSubmit, localStorage
         //    questSubmit(a.symbol, a.stage, c, a.chosen, null, null, a.id);
         //}
         if (a.actions_remaining > 0) {
-            questSubmit(a.symbol, a.stage, c, a.chosen, null, null, a.id);
+            questSubmit(a.symbol, a.stage, c, a.chosen, null, null, a.id, a.actions_remaining);
         } else {
             log("No actions remaining! Adjusting...", "BOSS");
 
