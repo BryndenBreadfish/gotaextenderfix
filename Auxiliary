@@ -813,7 +813,7 @@ function clearLog(){
     $("#logTab").trigger("click");
 }
 
-var bossChallenger = (function(log, error, questClose, questSubmit, localStorage){
+var bossChallenger = (function(log, error, questClose, questCall, questSubmit, localStorage){
 
     var _this = {
         init: init,
