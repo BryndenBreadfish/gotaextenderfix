@@ -892,7 +892,7 @@ var bossChallenger = (function(log, error, questClose, questSubmit, localStorage
                 "questId": a.id,
                 "timeout": setTimeout(function() {
                     questSubmit(a.symbol, a.stage, c, a.chosen, null, null, a.id);
-                }, 3 * 5 * 60 * 1000)
+                }, 3 * 67 * 1000)
             };
 
 
