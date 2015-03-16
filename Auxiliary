@@ -881,7 +881,7 @@ var bossChallenger = (function(log, error, questClose, questSubmit, localStorage
 
         if (a.actions_remaining > 0) {setTimeout(function() {
             questSubmit(a.symbol, a.stage, c, a.chosen, null, null, a.id);
-        }, 1700)} else {
+        }, 200)} else {
             log("No actions remaining! Adjusting...", "BOSS");
 
             var bossQuest = {
