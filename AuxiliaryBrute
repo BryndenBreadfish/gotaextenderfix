@@ -177,7 +177,7 @@ function bruteForce(enabled, times) {
     } else {
 
         // Add a minute to the cooldown, and then multiply by wounds
-        var interval = extender.options.bruteWounds * (s.damage_cooldown * 10 + 60 * 10);
+        var interval = extender.options.bruteWounds * (s.damage_cooldown + 60);
         msg = "Sworn sword recieved " + extender.options.bruteWounds + " wounds! " +
             "Brute timer will self adjust. Wait " + extender.options.bruteWounds + " * (" + s.damage_cooldown + " + 60) = " + interval + " seconds.";
 
